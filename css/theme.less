@@ -1,0 +1,57 @@
+@primary: darken(#00aadd, 3%);
+@secondary: #000;
+@tertiary: darken(@primary, 10%);
+
+
+body {
+  background: @primary;
+}
+
+
+.reveal { 
+  h1 {
+    font-size: 3em;
+    font-weight: 800;
+    text-transform: uppercase;
+    position: relative;
+
+    span {
+      display: block;
+      font-weight: 300;
+      font-style: italic;
+      text-transform: lowercase;
+      font-size: 0.5em;
+    }
+  }
+
+  h2 {
+    span {
+      font-weight: 900;
+      font-size: 3em;
+      color: @secondary;
+      tex-transform: uppercase;
+    }
+  }
+
+  h3 {
+    font-size: 1em;
+    font-weight: 400;
+  }
+
+  .inverse {
+    @spacing: 10px;
+    background: @tertiary;
+    border-radius: 4px;
+    padding: @spacing;
+    margin-right: @spacing;
+    display: inline-block;
+  }
+
+
+  blockquote {
+    background: @tertiary;
+  }
+}
+
+
+
