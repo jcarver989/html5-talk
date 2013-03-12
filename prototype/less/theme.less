@@ -4,6 +4,8 @@
 @tertiary: #21219A;
 @quaternary: #DDCA10;
 
+@navHeight: 60px;
+
 body { 
 }
 
@@ -14,10 +16,129 @@ body {
 }
 
 
-.slideshow {
+.hero-unit {
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 100px 0;
+  border-radius: 0;
   width: 100%;
   height: 450px;
   max-height: 450px;
+  background: @primary;
+  background: url("../img/vegas.jpg") no-repeat;
+  background-size: 100%;
+  color: #fff;
+
+  h1 {
+    font-size: 80px;
+    font-family: 'Lobster', cursive;
+    text-transform: lowercase;
+    text-shadow: 2px 4px 0px @primary, 5px 7px 0 @secondary, 7px 10px 10px lighten(@secondary,40%);
+  }
+}
+
+.navbar, .navbar-inner {
+  background: #000; //@primary;
+  box-shadow: none;
+  border: none;
+  height: @navHeight;
+}
+
+.navbar {
+  margin-bottom: 0px;
+
+  .brand {
+    font-family: 'Lobster', cursive;
+    line-height: @navHeight - 20;
+    text-shadow: none;
+    color: #fff;
+  }
+
+  .nav {
+    
+    li {
+      line-height: @navHeight - 20;
+      a { 
+        color: #fff;
+        text-shadow: none;
+      }
+    }
+    li.active a, li:hover a {
+      background: @primary;
+      color: #fff;
+      text-shadow: none;
+    }
+  }
+}
+
+
+.span4.centered {
+  text-align: center;
+}
+
+.btn.btn-primary {
   background: @secondary;
-  border-bottom: 3px solid @primary;
+  box-shadow: none;
+  border-radius: 0;
+
+  &.btn-jumbo {
+    margin-top: 20px;
+    font-size: 36px;
+    padding: 20px 30px;
+    box-shadow: 4px 4px 0px @primary,  0px 10px 10px lighten(@quaternary,40%);
+  }
+}
+
+
+.card {
+  @ratio: 130 / 150;
+  height: 150px;
+  width: 130px;
+  margin: 0 auto;
+  background: url("../img/pattern.png") @secondary;
+  display: block;
+  position: relative;
+  border-radius: 6px;
+  border: 4px solid rgba(255,255,255,0.6);
+
+  .icon-group {
+    @icon-size: 36px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: @icon-size;
+    height: @icon-size;
+    margin-left: -@icon-size / 2;
+    margin-top: -@icon-size / 2;
+    font-size: @icon-size;
+    color: #fff;
+  }
+}
+
+
+.content {
+  background: darken(@primary, 20%);
+  color: #fff;
+  margin-top: -30px;
+  padding-top: 60px;
+}
+
+
+@-webkit-keyframes hero-unit-image {
+  0% {
+    -webkit-transform: translateY(200px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateY(-200px);
+    opacity: 1;
+  }
+
+}
+.animated-image {
+  -webkit-animation-name: hero-unit-image;
+  -webkit-animation-duration: 1.0s;
+  -webkit-animation-delay: 0.5s;
+  -webkit-animation-fill-mode: both
 }
