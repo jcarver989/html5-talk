@@ -30,6 +30,7 @@ body {
   background-size: 100%;
   color: #fff;
   background: @primary;
+  background: -webkit-radial-gradient(80% 85%, 80% 80%, lighten(@primary, 30%), lighten(@primary, 0%));
 
   img.background { 
     position: absolute;
@@ -50,7 +51,7 @@ body {
     font-size: 80px;
     font-family: 'Lobster', cursive;
     text-transform: lowercase;
-    text-shadow: 2px 4px 0px @primary, 5px 7px 0 @secondary, 7px 10px 10px lighten(@secondary,40%);
+    text-shadow: 2px 4px 0px @secondary, 4px 5px 0 @secondary, 5px 8px 8px lighten(@primary,40%);
   }
 
   p {
@@ -158,19 +159,42 @@ body {
 
 @-webkit-keyframes hero-unit-image {
   0% {
-    -webkit-transform: translateY(0px);
+    -webkit-transform: translateX(-20px) translateY(-180px);
+    opacity: 0;
+  }
+
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px) translateY(-180px);
+  }
+}
+
+@-webkit-keyframes hero-unit-background {
+    0% {
+    -webkit-transform: translateY(100px);
     opacity: 0;
   }
 
   100% {
-    -webkit-transform: translateY(-100px);
+    -webkit-transform: translateY(0px);
     opacity: 1;
   }
-
 }
+
 .animated-image {
   -webkit-animation-name: hero-unit-image;
-  -webkit-animation-duration: 1.0s;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-delay: 1.2s;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+  width: 90%;
+}
+
+.animated-background {
+  -webkit-animation-name: hero-unit-background;
+  -webkit-animation-duration: 0.8s;
   -webkit-animation-delay: 0.5s;
-  -webkit-animation-fill-mode: both
+  -webkit-animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: both;
 }
