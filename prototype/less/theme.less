@@ -1,23 +1,33 @@
 
 // Color scheme
-@purple: #8F0A8F;
-@lavender: #4D1796;
-@blue: #21219A;
-@yellow: #DDCA10;
 @black: #000;
-@fuschia: #FC5882;
-@lightblue: #9EC8FE;
+@fuschia: #fd4168;
+@mediumFuschia: lighten(#af0047, 5%);
+@teal: #0084af;
 
 @primary: @black;
 @secondary: @fuschia;
-@tertiary: @blue;
-@quaternary: @lightblue;
+@tertiary: @mediumFuschia;
+@quaternary: @teal;
 
 
 
-@import "navigation.less"; 
+
+
+
 @import "scaffolding.less"; 
-@import "typography.less";
+@import "navigation.less"; 
+/*
 @import "buttons.less";
 @import "custom.less";
-@import "animations.less";
+@import "animations.less"; */
+
+
+img {
+  display: none !important;
+}
+
+.container-fluid {
+  margin: 0 auto;
+  max-width: 1000px;
+}

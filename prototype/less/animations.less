@@ -72,6 +72,17 @@
   }
 }
 
+
+.blink {
+  0%, 15%, 25% {
+    opacity: 0;
+  }
+
+  10%, 20%, 100% {
+    opacity: 1;
+  }
+}
+
 // borrowed from https://github.com/daneden/animate.css/blob/master/source/hinge.css
 .hinge {
 	0% { 
@@ -136,7 +147,12 @@
 @-webkit-keyframes hinge { .hinge(); } 
 @-moz-keyframes    hinge { .hinge(); } 
 @-o-keyframes      hinge { .hinge(); } 
-@keyframes         hinge { .hinge(); } 
+@keyframes         hinge { .hinge(); }
+
+@-webkit-keyframes blink { .blink(); } 
+@-moz-keyframes    blink { .blink(); } 
+@-o-keyframes      blink { .blink(); } 
+@keyframes         blink { .blink(); } 
 
 
 
@@ -159,4 +175,5 @@
   &.fade-out-down { #animation > .apply(fade-out-down); }
 
   &.hinge         { #animation > .apply(hinge); }
+  &.blink         { #animation > .apply(blink); }
 }
