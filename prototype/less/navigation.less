@@ -1,0 +1,44 @@
+// Navigation
+@navHeight: 50px;
+
+.navbar, .navbar-inner {
+  height: @navHeight;
+  background: @primary;
+  border: none;
+  color: #fff;
+  margin: 0;
+}
+
+.navbar {
+  margin: 0;
+  position: relative;
+  z-index: 5;
+
+  .brand {
+    padding: 0;
+    margin: 0;
+    line-height: @navHeight;
+    color: #fff;
+    text-shadow: none;
+    text-transform: lowercase;
+    font-size: 22px;
+    font-weight: 800;
+    font-family: 'Lobster', sans-serif;
+  }
+
+  .pull-right {
+   line-height: @navHeight;
+  }
+
+  .btn {
+    margin: 0;
+    background: @secondary;
+    color: #fff;
+    text-shadow: none;
+    border-bottom: none;
+  }
+}
+
+.navbar-inner {
+  border-radius: 0px;
+}

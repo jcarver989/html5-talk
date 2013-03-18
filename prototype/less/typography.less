@@ -1,0 +1,35 @@
+@h1-size: 60px;
+
+body { 
+  background: #000;
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+}
+
+h1, .copyright {
+  font-family: "Lobster", cursive;
+}
+
+h1 {
+  font-size: @h1-size;
+  margin-bottom: @h1-size / 2;
+  text-shadow: 2px 3px @primary, 4px 5px darken(@primary, 12%); 
+}
+
+h2 {
+  font-size: @h1-size / 2;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: @h1-size / 2.5;
+}
+
+h4 {
+  font-size: @h1-size / 3.5;
+}
+
+.copyright {
+  margin-top: 20px;
+  font-size: @h1-size / 2; 
+}
