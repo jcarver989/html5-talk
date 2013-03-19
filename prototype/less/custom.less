@@ -44,7 +44,8 @@
     border-bottom: 1px solid #fff;
 
     h1, h2, i {
-      color: @tertiary;
+      color: @quaternary;
+      text-shadow: none;
     }
   }
 
@@ -61,3 +62,73 @@
   margin-top: -100px;
 }
 
+
+.max-dimensions(@max-width, @max-height) {
+  position: absolute;
+  display: block; 
+  max-width: 221px;
+  max-height: 163px;
+  z-index: 0;
+}
+
+#sign-container {
+  .max-dimensions(221px, 163px);
+  left: 0;
+  bottom: 0;
+  color: #fff;
+
+  .title1 {
+    font-family: "Lobster", cursive;
+    text-align: center;
+    text-transform: lowercase;
+    width: 100%;
+    position: absolute;
+    top: 45px;
+    left: 0;
+  }
+
+  .title2 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    position: absolute;
+    top: 65px;
+    left: 0;
+  }
+
+  .title3 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    text-align: center;
+    text-transform: lowercase;
+    width: 100%;
+    position: absolute;
+    top: 85px;
+    left: 0;
+    font-size: 14px;
+  }
+}
+
+#sign-text {
+  position: absolute;
+}
+
+#luxor-container {
+  .max-dimensions(176px, 316px);
+  bottom: 0px;
+  right: 0px;
+}
+
+#luxor {
+  .max-dimensions(176px, 82px);
+  bottom: 0px;
+  right: 0px;
+}
+
+#luxor-light {
+  .max-dimensions(24px, 192px);
+  bottom: 82px;
+  right: 176px/2 - 10px;
+}
