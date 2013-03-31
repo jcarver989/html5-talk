@@ -168,6 +168,11 @@
         </section>
 
         <section>
+          <img src="img/bootstrap-plain.png"  />
+          <aside class="notes">Josh</aside>                    
+        </section>
+
+        <section>
           <img src="img/troopers.jpg" />
           <h3>Oh hai clone army</h3>          
           <aside class="notes">Josh</aside>          
@@ -228,6 +233,55 @@
           </ul>
           <aside class="notes">Jason</aside>          
         </section>
+
+        <section>
+          <h2>project <span>setup</span></h2>
+        </section>
+
+        <section>
+          <h3>Can't we just use the <span class="inverse">Customize Bootstrap</span> page?</h3>
+          <h2>Yes, but that isn't enough</h2>
+        </section>
+
+
+        <section>
+          <h2>Don't use the "download" Bootstrap option</h2>
+        </section>
+
+
+        <section>
+          <h2>Just clone the git repo</h2> 
+          <ul>
+            <li>Can make changes directly</li>
+            <li>Variables / mixins with LESS</li>
+            <li>This is what we do at Bizo</li>
+          </ul>
+        </section>
+
+
+        <section>
+          <h2>We wanted changes to be easily seen</h2>
+          <h3 class="inverse">So this talk's code is a bit special</h3>
+        </section>
+
+        <section>
+          <pre><code>
+&lt;!-- Example Project's index.html --&gt;
+
+
+&lt;!-- Standard Boostrap --&gt;
+&lt;link href="css/bootstrap.min.css" rel="stylesheet"&gt;
+
+&lt;!-- Overrides --&gt;
+&lt;link rel="stylesheet/less" type="text/css" href="less/theme.less" /&gt;
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>Done for clarifying differences from <span class="inverse">vanilla Bootstrap</span></h3>
+          <h2>Not the preferred way</h2> 
+        </section>
+
         
         <section>
           <h2>Layout</h2>
@@ -242,29 +296,6 @@
             Jason <br /> Use a marker, nothing fancy. This is just to get some very basic ideas down on paper. What are your most important elements. How are you going to arrange them on the page.
           </aside>                    
         </section>        
-
-        <section>
-          <h2>Fixed width is so 90's</h2>
-          <h3><span class="inverse">Fluid Baby!</span></h3>
-        </section>
-
-        <section>
-          <img src="img/layout-screen1.png" />
-        </section>
-
-        <section>
-          <h2>100% width + <span>Big</span> screen</h2>
-          <h3>Crappy for reading</h3>
-        </section>
-
-        <section>
-          <img src="img/layout-screen2.png" />
-        </section>
-
-        <section>
-          <h2>Now we can scale up/down</h2>
-          <h3><span class="inverse">Not quite responsive, but close enough for our talk</span></h3>
-        </section>
 
         <section>
           <section>
@@ -283,12 +314,70 @@
             <img src="img/fireworks-toolkit.png" />
             <aside class="notes">Jason</aside>                      
           </section>
-        </section>        
-        
+        </section> 
+
         <section>
           <h2>Layout</h2>
-          <h3>Step 2 - <i class="inverse">Bootstrap time!</i></h3>
+          <h3>Step 2 - <i class="inverse">Coding time!</i></h3>
           <aside class="notes">Josh</aside>                    
+        </section>
+
+        <section>
+          <img src="img/layout-screen1.png" />
+        </section>
+
+        <section>
+          <h2>Fixed width is so 90's</h2>
+          <h3><span class="inverse">Fluid Baby!</span></h3>
+        </section>
+
+        <section>
+        <pre><code>
+  &lt;!-- index.html --&gt;
+  &lt;div class="navbar"&gt; 
+    &lt;div class="navbar-inner container-fluid"&gt;...&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="hero-unit"&gt; 
+    &lt;div class="container-fluid"&gt;...&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="container-fluid"&gt;
+    &lt;div class="row-fluid"&gt; 
+      &lt;div class="span4"&gt;&lt;/div&gt;
+      &lt;div class="span4"&gt;&lt;/div&gt;
+      &lt;div class="span4"&gt;&lt;/div&gt;
+    &lt;/div&gt; 
+  &lt;/div&gt;
+ 
+          </code></pre>
+        <aside class="notes">Josh</aside>        
+        </section>
+
+
+        <section>
+          <h2>100% width + <span>Big</span> screen</h2>
+          <h3>Crappy for reading</h3>
+        </section>
+
+        <section>
+          <img src="img/layout-screen2.png" />
+        </section>
+
+
+        <section>
+        <pre><code>
+.container-fluid {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+        </pre></code>
+        <h3>Yup it's mostly that easy</h3>
+        </section>
+
+        <section>
+          <h2>Now we can scale up/down</h2>
+          <h3><span class="inverse">Not quite responsive, but close enough for our talk</span></h3>
         </section>
 
         <section>
@@ -297,17 +386,14 @@
         </section>
 
         <section>
-          <pre><code>
-  &lt;!-- assume typical HTML boilerplate --&gt;
-  &lt;div class="navbar"&gt; ... &lt;/div&gt;
-  &lt;div class="hero-unit"&gt; ... &lt;/div&gt;
-  &lt;div class="row-fluid"&gt; 
-    &lt;div class="span4"&gt;&lt;/div&gt;
-    &lt;div class="span4"&gt;&lt;/div&gt;
-    &lt;div class="span4"&gt;&lt;/div&gt;
-  &lt;/div&gt;
-          </code></pre>
-          <aside class="notes">Josh</aside>        
+          <h1>Progress</h1>
+          <ul>
+            <li><strike>Rad layout</strike></li>
+            <li>Bodacious color scheme</li>
+            <li>Tubular typography</li>
+            <li>Righteous style</li>            
+            <li>Gnarly custom components</li>
+          </ul>
         </section>
         
         <section>
@@ -321,6 +407,7 @@
           </ul>
           <aside class="notes">Jason</aside>          
         </section>        
+
 
         <section>
           <h2>Next: Choose a style</h2>
@@ -419,15 +506,9 @@
             </aside>
           </section>
         </section>
-              
-        <section>
-          <img src="img/bootstrap-colored.png" />
-          <h3>Tony's Site Colored</h3>          
-          <aside class="notes">Josh</aside>                     
-        </section>
 
         <section>
-          <pre><code>
+        <pre><code>
 // Color scheme
 @black: #000;
 @fuschia: #af0047;
@@ -440,6 +521,14 @@
 @quaternary: @teal;
           </code></pre>
         </section>
+              
+        <section>
+          <img src="img/bootstrap-colored.png" />
+          <h3>Tony's Site Colored</h3>          
+          <aside class="notes">Josh</aside>                     
+        </section>
+
+
         
         <section>
           <h2>So, <i class="inverse">what</i> do we need?</h2>
@@ -492,6 +581,37 @@
           <aside class="notes">
             Jason <br /> For text type, we chose open sans, a sans serif font with a lot of contrast from Lobster. In this case I'm intentionally creating contrast between my display and text type styles so that my headings get more attention. Instead, I could choose fonts from the same family to create harmony, with my display type simply being larger, bold or ultra. Note that text styles can be used as display fonts, but the reverse isn't true. Don't use #666 for copy (satan's font color) on a light background.
           </aside>                     
+        </section>
+
+        <section>
+          <h3>Integration</h3>
+          <pre><code>
+&lt;!-- typography --&gt;
+&lt;link href='http://fonts.googleapis.com/css?family=Lobster' /&gt;
+&lt;link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800' /'&gt;
+          </pre></code>
+        </section>
+
+        <section>
+          <pre><code>
+@h1-size: 60px;
+
+body {  
+  font-family: 'Open Sans', sans-serif; 
+}
+
+h1 {
+  font-family: "Lobster", cursive;
+  text-shadow: 3px 4px rgba(0, 0, 0, 0.5);
+  font-size: @h1-size;
+}
+
+h2 {
+  font-size: @h1-size / 2;
+  font-weight: normal;
+}
+
+          </pre></code>
         </section>
 
         <section>
