@@ -670,6 +670,40 @@ h2 {
           <aside class="notes">Jason</aside>
         </section>
 
+
+        <section>
+          <pre><code>
+&lt;div class="hero-unit"&gt;
+  &lt;img class="background" src="img/city.png" /&gt;
+
+  &lt;div class="container-fluid"&gt;
+    &lt;h1&gt;Stop being lonely&lt;/h1&gt;
+    &lt;h2&gt;Get more dates & advertise yourself&lt;/h2&gt;
+    &lt;a href="#" class="btn btn-primary btn-jumbo"&gt;Get started &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+          </pre></code>
+        </section>
+
+
+        <section>
+          <pre><code>
+.hero-unit {
+  height: 450px;
+  overflow: hidden;
+  position: relative;
+  background: @secondary;
+
+  img.background { 
+    position: absolute;
+    display: block;
+    bottom: 0px;
+    z-index: 0;
+  }
+}
+          </pre></code>
+        </section>
+
         <section>
           <img src="img/bootstrap-style.jpg" />
           <aside class="notes">Josh</aside>          
