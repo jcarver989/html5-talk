@@ -223,50 +223,7 @@
           </section>
         </section>
         
-        <section>
-          <h2>project <span>setup</span></h2>
-        </section>
-
-        <section>
-          <h3>Can't we just use the <span class="inverse">Customize Bootstrap</span> page?</h3>
-          <h2>Yes, but that isn't enough</h2>
-        </section>
-
-        <section>
-          <h2>Don't use the "download" Bootstrap option</h2>
-        </section>
-
-        <section>
-          <h2>Just clone the git repo</h2> 
-          <ul>
-            <li>Can make changes directly</li>
-            <li>Variables / mixins with LESS</li>
-            <li>This is what we do at Bizo</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>We wanted changes to be easily seen</h2>
-          <h3 class="inverse">So this talk's code is a bit special</h3>
-        </section>
-
-        <section>
-          <pre><code>
-&lt;!-- Example Project's index.html --&gt;
-
-
-&lt;!-- Standard Boostrap --&gt;
-&lt;link href="css/bootstrap.min.css" rel="stylesheet"&gt;
-
-&lt;!-- Overrides --&gt;
-&lt;link rel="stylesheet/less" type="text/css" href="less/theme.less" /&gt;
-          </code></pre>
-        </section>
-
-        <section>
-          <h3>Done for clarifying differences from <span class="inverse">vanilla Bootstrap</span></h3>
-          <h2>Not the preferred way</h2> 
-        </section>
+        
         
         <section>
           <h2>So, <i class="inverse">what</i> do we need?</h2>
@@ -317,6 +274,62 @@
           <h2>Layout</h2>
           <h3>Step 2 - <i class="inverse">Coding time!</i></h3>
           <aside class="notes">Josh</aside>                    
+        </section>
+
+        <section>
+          <h2>project <span>setup</span></h2>
+        </section>
+
+        <section>
+          <h3>Can't we just use the <span class="inverse">Customize Bootstrap</span> page?</h3>
+          <h2>Yes, but that isn't enough</h2>
+        </section>
+
+        <section>
+          <h2>Don't use the "download" Bootstrap option</h2>
+        </section>
+
+        <section>
+          <h2>Just clone/fork the git repo</h2> 
+          <ul>
+            <li>Can make changes directly</li>
+            <li>Variables / mixins with LESS</li>
+            <li>This is what we do at Bizo</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Suggested Setup</h2>
+          <h3>Makes merging updates from bootstrap really easy</h3>
+          <ul>
+            <li>branch: master (pristine bootstrap)</li>
+            <li>branch: your-changes</li>
+          </ul>
+
+        </section>
+
+        <section>
+          <h2>We wanted changes to be easily seen</h2>
+          <h3 class="inverse">So this talk's code is a bit special</h3>
+        </section>
+
+        <section>
+          <h3>We just override the styles</h3>
+          <pre><code>
+&lt;!-- Example Project's index.html --&gt;
+
+
+&lt;!-- Standard Boostrap --&gt;
+&lt;link href="css/bootstrap.min.css" rel="stylesheet"&gt;
+
+&lt;!-- Overrides --&gt;
+&lt;link rel="stylesheet/less" type="text/css" href="less/theme.less" /&gt;
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>Done for clarifying differences from <span class="inverse">vanilla Bootstrap</span></h3>
+          <h2>Not the preferred way</h2> 
         </section>
 
         <section>
@@ -717,7 +730,7 @@ h2 {
         </section>
 
         <section>
-          <img src="img/bootstrap-style.jpg" />
+          <img src="img/bootstrap-style.png" />
           <aside class="notes">Josh</aside>          
         </section>
 
@@ -741,7 +754,7 @@ h2 {
         </section>
 
         <section>
-          <img src="img/bootstrap-bottom-unstyled.jpg" />
+          <img src="img/bootstrap-bottom-unstyled.png" />
           <h3>Content section is boring</h3>          
           <aside class="notes">Josh</aside>          
         </section>
@@ -783,7 +796,7 @@ h2 {
         </section>
 
         <section>
-          <img src="img/bootstrap-cards.jpg" />
+          <img src="img/bootstrap-cards.png" />
           <aside class="notes">Josh</aside>          
         </section>
 
@@ -805,6 +818,11 @@ h2 {
 
 
         <section>
+          <img src="img/city-animation.png" />
+        </section>
+
+
+        <section>
         <pre><code>
 &lt;div class="hero-unit"&gt;
   &lt;img class="background animated fade-in-up delayed-025s" src="img/city.png" /&gt;
@@ -815,6 +833,7 @@ h2 {
 
 
         <section>
+          <h3>Caveat: Vendor Prefixes Omitted</h3>
           <pre><code>
 @keyframes fade-in-up {
   from { opacity: 0; transform:  translate(0, 50px); }
@@ -832,11 +851,45 @@ h2 {
           </pre></code>
         </section>
 
+
         <section>
-          <h2>Making the luxor light & vegas sign turn on</h2>
+          <pre><code>
+.delayed-xxx {
+  animation-delay: XXXs;
+}
+
+/* for example */
+.delayed-025s {
+  animation-delay: 0.25s;
+}
+
+
+/* repeat ... */
+          </pre></code>
         </section>
 
         <section>
+          <h2>Neat, but can go further</h2>
+          <h3 class="inverse">Let's make the sign and luxor light up</h3>
+        </section>
+
+        <section>
+          <img src="img/city-blink.png" />
+        </section>
+
+        <section>
+
+          <pre><code>
+&lt;!-- inside hero unit --&gt;
+&lt;div id="sign-container"&gt;
+  &lt;img id="sign" class="animated fade-in-up delayed-025s" src="img/sign.png" /&gt;
+  &lt;span class="title1 animated fade-in delayed-2-05s"&gt;Welcome to&lt;/span&gt;
+  &lt;span class="title2 animated blink delayed-3s"&gt;Date Ville&lt;/span&gt;
+  &lt;span class="title3 animated fade-in delayed-2-05s"&gt;pop: you&lt;/span&gt;
+&lt;div&gt;
+          </pre></code>
+
+
           <pre><code>
 &lt;!-- inside hero unit --&gt;
 &lt;div id="luxor-container"&gt;
@@ -845,6 +898,64 @@ h2 {
 &lt;div&gt;
           </pre></code>
 
+        </section>
+
+        <section>
+        <h3>Positioning the Luxor & Sign</h3>
+          <pre><code>
+#sign-container {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+#luxor-container {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+          </code></pre>
+        </section>
+
+
+        <section>
+          <h3>Positioning Cont<h3>
+          <pre><code>
+#luxor {
+  position: absolute;
+  bottom: 0; 
+  right: 0;
+}
+
+#luxor-light {
+  position: absolute;
+  bottom: 82px; /* height of luxor image */
+  right: 176px / 2 - 10px; /* center the light on luxor */
+}
+          </code></pre>
+        </section>
+
+
+        <section>
+          <h3>Last Bit: The Blink</h3>
+          <pre><code>
+@keyframes blink {
+    0%, 15%, 25% {
+    opacity: 0;
+  }
+
+  10%, 20%, 100% {
+    opacity: 1;
+  }
+}
+          </code></pre>
+        </section>
+
+
+        <section>
+          <a href="/prototype/index.html" target="_blank">The Final Site</a>
         </section>
         
         <section>
@@ -880,6 +991,7 @@ h2 {
         
         <section>
           <h1>Thanks and Good Luck!</h1>
+          <h3>github.com/jcarver989/html5-talk</h3>
           <br />
           <h3 class="inverse">@jasondwilkens</h3>  
           <h3 class="inverse">@josh_carver</h3>          
