@@ -788,14 +788,63 @@ h2 {
         </section>
 
         <section>
-          <h1>Finishing Touches...</h1>
-          <ul>
-            <li>Extra copy / sections</li>
-            <li>CSS animations</li>
-            <li>Humor</li>
-            <li><a href="http://softwarebyjosh.com/html5-talk/prototype/index.html" target="_blank">Finished Site</a></li>
-          </ul>
+          <h1>Final Polish...</h1>
           <aside class="notes">Josh</aside>          
+        </section>
+
+
+        <section>
+          <h2>Extra <span>Style</span></h2>
+          <h3>With CSS3 Animations</h3>
+        </section>
+
+        <section>
+          <img src="img/city-illustration-3.jpg" />
+          <h3>Let's make the city fade in while sliding up</h3>
+        </section>
+
+
+        <section>
+        <pre><code>
+&lt;div class="hero-unit"&gt;
+  &lt;img class="background animated fade-in-up delayed-025s" src="img/city.png" /&gt;
+  ...
+&lt;/div&gt;
+        </pre></code>
+        </section>
+
+
+        <section>
+          <pre><code>
+@keyframes fade-in-up {
+  from { opacity: 0; transform:  translate(0, 50px); }
+  to   { opacity: 1; transform:  translate(0, 0); }
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.fade-in-up {
+  animation-name: fade-in-up;
+}
+          </pre></code>
+        </section>
+
+        <section>
+          <h2>Making the luxor light & vegas sign turn on</h2>
+        </section>
+
+        <section>
+          <pre><code>
+&lt;!-- inside hero unit --&gt;
+&lt;div id="luxor-container"&gt;
+  &lt;img id="luxor" class="animated fade-in-up delayed-025s" src="img/luxor.png" /&gt;
+  &lt;img id="luxor-light" class="animated blink delayed-2s" src="img/luxor-light.png" /&gt;
+&lt;div&gt;
+          </pre></code>
+
         </section>
         
         <section>
@@ -817,6 +866,7 @@ h2 {
             <li><a href="http://bootswatch.com">Bootswatch</a></li>
             <li><a href="http://jumpstartui.com">Jumpstart UI</a></li>
             <li><a href="https://www.codebootstrap.com">Code Bootstrap</a></li>
+            <li><a href="http://softwarebyjosh.com/html5-talk/prototype/index.html" target="_blank">Finished Site</a></li>
           </ul>
           <aside class="notes">Jason</aside>          
         </section>
